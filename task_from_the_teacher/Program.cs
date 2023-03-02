@@ -2,17 +2,6 @@
 {
     internal class Program
     {
-        static int GetConvertUserMassedge(string userMassedge)
-        {
-            int result = 0;
-            while (true)
-            {
-                Console.Write(userMassedge);
-                bool convert = int.TryParse(Console.ReadLine(), out result);
-                if (convert) return result;
-                else Console.WriteLine($"Ошибка! Введенная информация не корректна. Попробуйте еще раз.");
-            }
-        }        
         static int GetCheckingForPositivity()
         {
             int quantityPositivityNumber = 0;
@@ -21,7 +10,7 @@
             {
                 Console.WriteLine("Введите число: ");
                 string userMassedge = Console.ReadLine();
-                if (userMassedge == "stop")
+                if (userMassedge == "stop" || userMassedge == "стоп" || userMassedge == "ыещз")
                 {
                     break;
                 }
@@ -39,7 +28,7 @@
         static void Main(string[] args)
         {
             int count = GetCheckingForPositivity();
-            Console.WriteLine(count);
+            Console.WriteLine($"Количество чисел больше нуля равно {count}");
         }
     }
 }

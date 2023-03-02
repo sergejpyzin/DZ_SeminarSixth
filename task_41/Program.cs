@@ -47,7 +47,7 @@
         {
             int numberM = GetConvertUserMassedge("Введите количество чисел: ");           
             int count = GetCheckingForPositivity(GetFilledArray(numberM));
-            Console.WriteLine(count);
+            Console.WriteLine($"Количество чисел больше нуля равно {count}");
         }
     }
 }
